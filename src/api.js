@@ -1,8 +1,6 @@
-
-// src/api.js
 import axios from 'axios';
 
-const API = axios.create({
+export const API = axios.create({
   baseURL: 'https://tienda-ropa-backend-34wf.onrender.com'
 });
 
