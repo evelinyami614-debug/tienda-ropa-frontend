@@ -1,0 +1,697 @@
+/* ========================================================
+   PURPLE + LUXE • RETRO CUTE WINDOW THEME
+   Inspirado en tonos morados pastel (Img 1) & marco ventana retro (Img 2)
+   ======================================================== */
+
+:root {
+  --purple-deep: #472d5c;
+  --purple-main: #6e4c8f;
+  --purple-hover: #5d3d7d;
+  --purple-light: #9d7ec4;
+  --purple-pastel: #e5d8f6;
+  --purple-soft: #f4ecfc;
+  --purple-bg: #ece1f8;
+  --gold-accent: #cfa864;
+  --gold-light: #fef7e6;
+  --window-border: #4d3363;
+  --card-border: #d9c8ef;
+  --text-dark: #3b254d;
+  --text-muted: #745f85;
+  --white: #ffffff;
+}
+
+/* Fondo de escritorio pastel gingham (cuadros retro) */
+.retro-desktop {
+  min-height: 100vh;
+  padding: 30px 16px;
+  background-color: var(--purple-bg);
+  background-image: 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.45) 50%, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.45) 50%, transparent 50%);
+  background-size: 36px 36px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Marco de ventana retro (Inspiración Img 2) */
+.cute-window {
+  width: 100%;
+  max-width: 1080px;
+  background: #fbf9fd;
+  border: 3.5px solid var(--window-border);
+  border-radius: 28px;
+  box-shadow: 
+    0 18px 45px rgba(71, 45, 92, 0.18),
+    0 6px 0 var(--window-border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+/* ==================== BARRA SUPERIOR DE VENTANA ==================== */
+.window-header {
+  background: #ecdcf9;
+  border-bottom: 3px solid var(--window-border);
+  padding: 12px 16px 8px;
+}
+
+/* Pestañas de carpeta */
+.window-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  overflow-x: auto;
+}
+
+.window-tab {
+  background: #decaef;
+  border: 2px solid var(--window-border);
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  padding: 6px 16px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--purple-deep);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.window-tab:hover {
+  background: #ebdcfb;
+}
+
+.window-tab.active {
+  background: #fbf9fd;
+  color: var(--purple-deep);
+  position: relative;
+  top: 1px;
+}
+
+/* Barra de dirección de navegador */
+.browser-navbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #ffffff;
+  border: 2px solid var(--window-border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--purple-deep);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.1s;
+}
+
+.nav-btn:hover {
+  background: var(--purple-soft);
+  transform: translateY(-1px);
+}
+
+.address-bar {
+  flex: 1;
+  background: #ffffff;
+  border: 2px solid var(--window-border);
+  border-radius: 20px;
+  padding: 5px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--purple-deep);
+}
+
+.url-text {
+  flex: 1;
+  font-family: monospace;
+  letter-spacing: 0.5px;
+  color: #63477e;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.heart-icon {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* ==================== HERO BANNER (PURPLE + LUXE) ==================== */
+.hero-banner {
+  background: linear-gradient(135deg, #e3d0f7 0%, #ecdffb 50%, #f6efff 100%);
+  border-bottom: 2.5px solid var(--window-border);
+  padding: 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: var(--purple-deep);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--purple-deep);
+  letter-spacing: -0.5px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.hero-title span {
+  color: var(--gold-accent);
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.hero-decorative {
+  display: flex;
+  align-items: center;
+}
+
+.deco-card {
+  background: #ffffff;
+  border: 2px solid var(--window-border);
+  border-radius: 16px;
+  padding: 10px 16px;
+  text-align: center;
+  box-shadow: 3px 3px 0 var(--window-border);
+  transform: rotate(3deg);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.deco-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--gold-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.deco-emoji {
+  font-size: 1.5rem;
+}
+
+/* ==================== CONTENIDO PRINCIPAL ==================== */
+.window-content {
+  padding: 24px;
+  flex: 1;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tarjetas cute con estilo de caja */
+.cute-card {
+  background: #ffffff;
+  border: 2.5px solid var(--window-border);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 4px 4px 0 var(--card-border);
+  position: relative;
+}
+
+.card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--purple-soft);
+  color: var(--purple-deep);
+  border: 1.5px solid var(--card-border);
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  color: var(--purple-deep);
+  margin-bottom: 4px;
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+/* ==================== FORMULARIO ==================== */
+.cute-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-link-action {
+  background: var(--purple-soft);
+  color: var(--purple-deep);
+  border: 1.5px solid var(--card-border);
+  border-radius: 8px;
+  padding: 2px 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-link-action:hover {
+  background: var(--purple-pastel);
+  border-color: var(--purple-main);
+  transform: translateY(-1px);
+}
+
+.form-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--purple-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cute-input {
+  width: 100%;
+  padding: 10px 14px;
+  background: #faf7fd;
+  border: 2px solid var(--card-border);
+  border-radius: 12px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  font-weight: 600;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.cute-input:focus {
+  background: #ffffff;
+  border-color: var(--purple-main);
+  box-shadow: 0 0 0 3px rgba(110, 76, 143, 0.15);
+}
+
+.alert-success {
+  background: #eefbee;
+  border: 2px solid #a3e3a3;
+  color: #276727;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+/* Botón estilo Purple Luxe */
+.btn-luxe {
+  background: var(--purple-main);
+  color: #ffffff;
+  border: 2px solid var(--window-border);
+  border-radius: 14px;
+  padding: 12px 18px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 2px 2px 0 var(--window-border);
+  transition: all 0.15s ease;
+  margin-top: 6px;
+}
+
+.btn-luxe:hover {
+  background: var(--purple-hover);
+  transform: translateY(-1px);
+  box-shadow: 3px 3px 0 var(--window-border);
+}
+
+.btn-luxe:active {
+  transform: translateY(1px);
+  box-shadow: 1px 1px 0 var(--window-border);
+}
+
+.btn-refresh {
+  background: var(--purple-soft);
+  color: var(--purple-deep);
+  border: 2px solid var(--card-border);
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-refresh:hover {
+  background: var(--purple-pastel);
+  border-color: var(--purple-main);
+}
+
+/* ==================== TABLA DE VENTAS ==================== */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 2px solid var(--card-border);
+}
+
+.cute-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  background: #ffffff;
+  text-align: left;
+}
+
+.cute-table thead {
+  background: #ecdcf9;
+}
+
+.cute-table th {
+  padding: 11px 12px;
+  color: var(--purple-deep);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--card-border);
+}
+
+.cute-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #f1e9f9;
+  color: var(--text-dark);
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.cute-table tbody tr:hover {
+  background: #faf5ff;
+}
+
+.badge-id {
+  background: var(--purple-soft);
+  color: var(--purple-deep);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.badge-qty {
+  background: #fdf5e2;
+  color: #8c671b;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.badge-total {
+  background: #ecdcf9;
+  color: var(--purple-deep);
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.cell-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-action {
+  border: 1.5px solid var(--window-border);
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-edit {
+  background: #ffe8a3;
+  color: #6d5000;
+}
+
+.btn-edit:hover {
+  background: #ffd875;
+  transform: translateY(-1px);
+}
+
+.btn-delete {
+  background: #fcd5dc;
+  color: #8d2238;
+}
+
+.btn-delete:hover {
+  background: #fbbdca;
+  transform: translateY(-1px);
+}
+
+/* Estado vacío */
+.empty-state {
+  text-align: center;
+  padding: 36px 16px;
+  background: #faf6fd;
+  border-radius: 14px;
+  border: 2px dashed var(--card-border);
+}
+
+.empty-icon {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.empty-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--purple-deep);
+}
+
+.empty-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* ==================== MODAL DE EDICIÓN ==================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(71, 45, 92, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 440px;
+  background: #ffffff;
+  border: 3px solid var(--window-border);
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 16px 40px rgba(71, 45, 92, 0.3);
+  animation: popIn 0.2s ease-out;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.modal-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  color: var(--purple-deep);
+  margin-bottom: 4px;
+}
+
+.btn-close {
+  background: var(--purple-soft);
+  border: 1.5px solid var(--card-border);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--purple-deep);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-close:hover {
+  background: #fcd5dc;
+  color: #8d2238;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.modal-buttons button {
+  flex: 1;
+}
+
+.btn-cancel {
+  background: #f3ebfa;
+  color: var(--purple-deep);
+  border: 2px solid var(--card-border);
+  border-radius: 14px;
+  padding: 12px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-cancel:hover {
+  background: #e6d3f7;
+}
+
+/* ==================== SECCIÓN DE INFORMACIÓN ==================== */
+.info-section {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.stat-pill {
+  background: #f1e4fb;
+  border: 1.5px solid var(--card-border);
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--purple-deep);
+}
+
+/* ==================== PIE DE VENTANA ==================== */
+.window-footer {
+  background: #ecdcf9;
+  border-top: 2.5px solid var(--window-border);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--purple-deep);
+}
+
+.footer-links {
+  display: flex;
+  gap: 14px;
+  color: var(--text-muted);
+}
