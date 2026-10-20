@@ -26,7 +26,7 @@ function App() {
             </div>
             <div className="address-bar">
               <span className="lock-icon">🔒</span>
-              <span className="url-text">https://purple-luxe.boutique/ventas</span>
+              <span className="url-text">https://Catalan-luxe.boutique/ventas</span>
               <span className="heart-icon">🤍</span>
             </div>
           </div>
@@ -36,7 +36,7 @@ function App() {
         <div className="hero-banner">
           <div className="hero-content">
             <span className="hero-badge">✨ Nueva Colección • INFRAMEN</span>
-            <h1 className="hero-title">Purple <span>+</span> Luxe</h1>
+            <h1 className="hero-title"> Catalan <span>+</span> Luxe</h1>
             <p className="hero-subtitle">Sistema de Gestión & Ventas de la Tienda de Ropa</p>
           </div>
           <div className="hero-decorative">
@@ -57,9 +57,9 @@ function App() {
 
         {/* Pie de ventana retro */}
         <div className="window-footer">
-          <span>( Purple + Luxe • Tienda de Ropa INFRAMEN 💜 )</span>
+          <span>( Catalan + Luxe • Tienda de Ropa INFRAMEN 💜 )</span>
           <div className="footer-links">
-            <span>📷 @purpleluxe</span>
+            <span>📷 @ccatalan.e</span>
             <span>✨ 2026</span>
           </div>
         </div>

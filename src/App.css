@@ -36,8 +36,8 @@
 
 /* Marco de ventana retro (Inspiración Img 2) */
 .cute-window {
-  width: 100%;
-  max-width: 1080px;
+  width: 200;
+  max-width: 1500px;
   background: #fbf9fd;
   border: 3.5px solid var(--window-border);
   border-radius: 28px;
@@ -433,6 +433,7 @@
   overflow-x: auto;
   border-radius: 14px;
   border: 2px solid var(--card-border);
+  
 }
 
 .cute-table {
